@@ -21,16 +21,16 @@ export default function NavBar() {
         color
           ? "sticky top-0 w-full transition duration-1000 ease-in-out bg-slate-300 "
           : "sticky top-0 w-full"
-      }
+      } 
     >
       <div className="mx-auto max-w-full sm:px-6 lg:px-8">
         <div className="relative flex items-center h-16 ">
-          <div className="flex flex-1 items-stretch sm:items-stretch sm:justify-start">
-            <div className="flex flex-shrink-0 items-center ml-8 text-xl ">
+          <div className="flex flex-1 items-stret justify-center sm:items-stretch sm:justify-start">
+            <div className="flex flex-shrink-0 items-center ml-6 md:ml-8 text-xl ">
               FASHIONISTA
             </div>
-            <div className="sm:ml-6 sm:block">
-              <div className="flex space-x-4">
+            <div className="ml-0 sm:ml-6 sm:block">
+              <div className="flex  items-center justify-center space-x-4">
                 <a
                   href="#Home"
                   className=" hover:bg-neutral-300 text-black rounded-md px-3 py-2 text-m font-medium"
@@ -54,7 +54,7 @@ export default function NavBar() {
                 </a>
               </div>
             </div>
-            <form className="flex items-center max-w-sm ml-auto mr-5 grow">
+            <form className="flex items-center max-w-sm ml-auto mr-5 grow invisible md:visible	">
               <label className="sr-only">Search</label>
               <div className="relative w-full">
                 <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
