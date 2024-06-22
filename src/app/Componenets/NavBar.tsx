@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+// import Link from 'next/link;
 
 export default function NavBar() {
   const [color, setColor] = useState(false);
@@ -85,11 +86,11 @@ export default function NavBar() {
             </form>
             <div className="flex items-center space-x-2 mr-8">
               <a
-                href="#About"
+                href="/login"
                 className=" bg-slate-200 hover:bg-slate-300 text-black rounded-2xl px-3 py-2 text-m font-medium "
                 aria-current="page"
               >
-                Log In
+                Log In  
               </a>
               <a
                 href="#About"
