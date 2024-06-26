@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-// import Link from 'next/link;
+import Link from 'next/link';
 
 export default function NavBar() {
   const [color, setColor] = useState(false);
@@ -27,9 +27,9 @@ export default function NavBar() {
       <div className="mx-auto max-w-full sm:px-6 lg:px-8">
         <div className="relative flex items-center h-16 ">
           <div className="flex flex-1 items-stret justify-center sm:items-stretch sm:justify-start">
-            <div className="flex flex-shrink-0 items-center ml-6 md:ml-8 text-xl ">
+            <Link href="/" className="flex flex-shrink-0 items-center ml-6 md:ml-8 text-xl ">
               FASHIONISTA
-            </div>
+            </Link>
             <div className="ml-0 sm:ml-6 sm:block">
               <div className="flex  items-center justify-center space-x-4">
                 <a
@@ -55,7 +55,7 @@ export default function NavBar() {
                 </a>
               </div>
             </div>
-            <form className="flex items-center max-w-sm ml-auto mr-5 grow invisible md:visible	">
+            <form className="flex items-center max-w-sm ml-auto mr-5 grow invisible md:visible">
               <label className="sr-only">Search</label>
               <div className="relative w-full">
                 <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -85,20 +85,20 @@ export default function NavBar() {
               </div>
             </form>
             <div className="flex items-center space-x-2 mr-8">
-              <a
-                href="/login"
+              <Link
+                href="/Login"
                 className=" bg-slate-200 hover:bg-slate-300 text-black rounded-2xl px-3 py-2 text-m font-medium "
                 aria-current="page"
               >
-                Log In  
-              </a>
-              <a
-                href="#About"
+                Login
+              </Link>
+              <Link
+                href="/SignUp"
                 className=" bg-emerald-400 hover:bg-emerald-500 text-black rounded-2xl px-3 py-2 text-m font-medium"
                 aria-current="page"
               >
                 Sign Up
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-export default function Page() {
+export default function LandingPage() {
   return (
     <>
       <div className="w-full h-dvh bg-white ">
