@@ -1,4 +1,6 @@
 "use client";
+import { SignInButton } from "@clerk/nextjs";
+import { useConvexAuth } from "convex/react";
 import { useState } from "react";
 import Link from 'next/link';
 
@@ -16,7 +18,12 @@ export default function NavBar() {
     window.addEventListener("scroll", changeColor);
   }
 
+  const { isAuthenticated, isLoading } = useConvexAuth();
+
+
   return (
+
+
     <nav
       className={
         color
@@ -85,20 +92,14 @@ export default function NavBar() {
               </div>
             </form>
             <div className="flex items-center space-x-2 mr-8">
-              <Link
-                href="/Login"
-                className=" bg-slate-200 hover:bg-slate-300 text-black rounded-2xl px-3 py-2 text-m font-medium "
-                aria-current="page"
-              >
-                Login
-              </Link>
-              <Link
-                href="/SignUp"
+            
+              <SignInButton>
+                <button
                 className=" bg-emerald-400 hover:bg-emerald-500 text-black rounded-2xl px-3 py-2 text-m font-medium"
-                aria-current="page"
               >
                 Sign Up
-              </Link>
+                </button>
+                </SignInButton>
             </div>
           </div>
         </div>
@@ -106,3 +107,7 @@ export default function NavBar() {
     </nav>
   );
 }
+
+
+
+// bg-slate-200 hover:bg-slate-300
