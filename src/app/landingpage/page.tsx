@@ -1,19 +1,19 @@
 'use client'
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/router';
 import NavBar from "../Componenets/NavBar";
 import LandingPage2 from "../Componenets/LandingPage";
 import { useConvexAuth } from "convex/react";
 
 export function LandingPage() {
   const { isAuthenticated, isLoading } = useConvexAuth();
-  const navigate = useNavigate();
+  const router = useRouter();
 
   useEffect(() => {
     if (isAuthenticated) {
-      navigate('/home');
+      router.push('/home');
     }
-  }, [isAuthenticated, navigate]);
+  }, [isAuthenticated, router]);
 
   return (
     <>
