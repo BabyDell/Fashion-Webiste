@@ -1,13 +1,19 @@
 import { useClerk } from '@clerk/clerk-react';
+import { useNavigate } from 'react-router-dom';
 
 
 
  function SignButton(text: string, signIn : boolean) {
-  const { openSignIn } = useClerk();
 
-  const handleSignIn = () => {
-    openSignIn();
-  };
+    const navigate = useNavigate();
+
+    const { openSignIn } = useClerk();
+
+    const handleSignIn = () => {
+        openSignIn();
+
+        navigate('/home');
+    };
 
   return (
     <button 

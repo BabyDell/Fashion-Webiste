@@ -1,9 +1,9 @@
-export default function LandingPage() {
-  return (
+export default function LandingPage2() {
+  return (  
     <>
       <div className="w-full h-dvh bg-white ">
         <div className="absolute mx-auto  -mt-12 inset-x-0 top-1/4 h-auto w-auto">
-          <div className="font-serif text-5xl mb-3 text-gray-700 text-emerald-800">
+          <div className="font-serif text-5xl mb-3 text-emerald-800">
             Upgrade Your Fashion
           </div>
           <button className="bg-red-600 hover:bg-red-700 px-4 py-3 rounded-md text-xl text-slate-100">
